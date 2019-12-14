@@ -78,7 +78,6 @@ public:
 
     explicit operator bool()
     {
-        // unique_ptr bool operátora kell
         return static_cast<bool>(func);
     }
 };
