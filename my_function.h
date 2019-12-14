@@ -1,5 +1,8 @@
 #pragma once
 
+#include <memory>
+#include <utility>
+
 template <typename T>
 class my_function;
 
@@ -25,7 +28,7 @@ class my_function<RET (PARAMS...)>
         }
     };
 
-    std::unique_ptr<callable_base> func;
+    std::unique_ptr<callable_base> func;    // RAII by default
 
 public:
     my_function() = default;    // func is nullptr by default
