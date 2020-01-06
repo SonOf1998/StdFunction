@@ -1,4 +1,4 @@
-# reinventing the wheel - std::function -
+# - std::function -
 Use it just like the original. Requires ISO C++17.
 
 #include "my_function.h"
