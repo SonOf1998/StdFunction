@@ -1,5 +1,5 @@
-#ifndef UNTITLED_MY_VECTOR_H
-#define UNTITLED_MY_VECTOR_H
+#ifndef MY_VECTOR_H
+#define MY_VECTOR_H
 
 #include <utility>
 
@@ -157,6 +157,16 @@ public:
         new (&data[m_size++]) T(std::forward<ARGS...>(args)...);
     }
 
+    T& operator[](unsigned int index)
+    {
+        return data[index];
+    }
+    
+    const T& operator[](unsigned int index) const 
+    {
+        return data[index];
+    }
+    
     [[nodiscard]] size_t size() const
     {
         return m_size;
@@ -172,4 +182,3 @@ public:
 
 
 #endif
-
